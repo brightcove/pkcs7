@@ -1,0 +1,38 @@
+{
+  "name": "pkcs7",
+  "version": "0.0.0",
+  "main": "lib/pkcs7.js",
+  "description": "Add and remove pkcs7-style padding.",
+  "homepage": "https://github.com/brightcove/pkcs7",
+  "bugs": "https://github.com/brightcove/pkcs7/issues",
+  "author": {
+    "name": "Brightcove"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brightcove/pkcs7"
+  },
+  "license": "Apache2",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "pkcs7",
+    "pkcs7 encrypt decrypt padding pkcs"
+  ],
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt-contrib-watch": "^0.6.1",
+    "load-grunt-tasks": "^0.4.0",
+    "time-grunt": "^0.3.1",
+    "jshint-stylish": "^0.2.0"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "bin": {
+    "pkcs7": "cli.js"
+  },
+  "preferGlobal": "true"
+}
