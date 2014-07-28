@@ -32,7 +32,7 @@
     "test": "grunt"
   },
   "bin": {
-    "pkcs7": "cli.js"
+    "pkcs7": "lib/cli.js"
   },
   "preferGlobal": "true"
 }
