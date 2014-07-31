@@ -23,40 +23,43 @@ var pkcs7 = require('../lib/pkcs7.js');
 */
 
 exports.pkcs7 = {
-  setUp: function(done) {
-    // setup here
-    done();
-  },
   'pads empty buffers': function(test) {
+    var result;
     test.expect(1);
-    test.deepEqual(pkcs7.unpad(pkcs7.pad(new Buffer([]))),
-               new Buffer(0),
+    result = pkcs7.unpad(pkcs7.pad(new Uint8Array([])));
+    test.deepEqual(new Uint8Array(result, result.byteOffset, result.byteLength),
+               new Uint8Array(0),
                'accepts an empty buffer');
     test.done();
   },
   'pads non-empty buffers': function(test) {
-    var i = 16, buffer;
+    var i = 16, buffer, result;
     test.expect(i * 3);
     while (i--) {
       // build the test buffer
-      buffer = new Buffer(i + 1);
-      buffer.fill(0xff);
+      buffer = new Uint8Array(i + 1);
 
-      test.equal(pkcs7.pad(buffer).length % 16, 0, 'padded length is a multiple of 16');
-      test.equal(pkcs7.pad(buffer).slice(-1)[0], 16 - ((i + 1) % 16), 'appended the correct value');
-      test.deepEqual(pkcs7.unpad(pkcs7.pad(buffer)), buffer, 'padding is reversible');
+      result = pkcs7.pad(buffer);
+      test.equal(result.length % 16, 0, 'padded length is a multiple of 16');
+      test.equal(result.slice(-1)[0], 16 - ((i + 1) % 16), 'appended the correct value');
+      result = pkcs7.unpad(result);
+      test.deepEqual(new Uint8Array(result, result.byteOffset, result.byteLength),
+                     buffer,
+                     'padding is reversible');
     }
     test.done();
   },
   'works on buffers greater than sixteen bytes': function(test) {
-    var buffer = new Buffer(16 * 3 + 9);
+    var buffer = new Uint8Array(16 * 3 + 9), result;
     test.expect(2);
-    buffer.fill(0xff);
 
     test.equal(pkcs7.pad(buffer).length - buffer.length,
                16 - 9,
                'adds the correct amount of padding');
-    test.deepEqual(pkcs7.unpad(pkcs7.pad(buffer)), buffer, 'is reversible');
+    result = pkcs7.unpad(pkcs7.pad(buffer));
+    test.deepEqual(new Uint8Array(result, result.byteOffset, result.byteLength),
+                   buffer,
+                   'is reversible');
     test.done();
   }
 };
