@@ -26,6 +26,38 @@ module.exports = function (grunt) {
         src: ['test/**/*.js']
       }
     },
+    browserify: {
+      all: {
+        files: {
+          'dist/pkcs7.js': 'lib/pkcs7.js'
+        },
+        options: {
+          bundleOptions: {
+            standalone: 'pkcs7'
+          }
+        }
+      },
+      pad: {
+        files: {
+          'dist/pkcs7.pad.js': 'lib/pad.js'
+        },
+        options: {
+          bundleOptions: {
+            standalone: 'pkcs7.pad'
+          }
+        }
+      },
+      unpad: {
+        files: {
+          'dist/pkcs7.unpad.js': 'lib/unpad.js'
+        },
+        options: {
+          bundleOptions: {
+            standalone: 'pkcs7.unpad'
+          }
+        }
+      }
+    },
     watch: {
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
@@ -43,5 +75,5 @@ module.exports = function (grunt) {
   });
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'nodeunit']);
+  grunt.registerTask('default', ['jshint', 'nodeunit', 'browserify']);
 };
