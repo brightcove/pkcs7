@@ -6,9 +6,7 @@
   "homepage": "https://github.com/brightcove/pkcs7",
   "bugs": "https://github.com/brightcove/pkcs7/issues",
   "engines": {
-    {
-      "npm": "^1.4.6"
-    }
+    "npm": "^1.4.6"
   },
   "author": {
     "name": "Brightcove"
@@ -40,6 +38,5 @@
   },
   "bin": {
     "pkcs7": "lib/cli.js"
-  },
-  "preferGlobal": "true"
+  }
 }
