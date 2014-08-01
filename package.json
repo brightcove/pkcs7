@@ -14,7 +14,8 @@
   },
   "license": "Apache2",
   "files": [
-    "lib"
+    "lib",
+    "dist"
   ],
   "keywords": [
     "pkcs7",
