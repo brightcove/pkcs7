@@ -57,7 +57,7 @@ module.exports = function (grunt) {
           }
         }
       },
-      upad_global: {
+      unpad_global: {
         files: {
           'dist/pkcs7.unpad.global.js': 'lib/unpad.js'
         },
