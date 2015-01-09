@@ -56,6 +56,17 @@ module.exports = function (grunt) {
             standalone: 'pkcs7.unpad'
           }
         }
+      },
+      upad_global: {
+        files: {
+          'dist/pkcs7.unpad.global.js': 'lib/unpad.js'
+        },
+        options: {
+          plugin: ['deumdify'],
+          browserifyOptions: {
+            standalone: 'pkcs7.unpad'
+          }
+        }
       }
     },
     watch: {
