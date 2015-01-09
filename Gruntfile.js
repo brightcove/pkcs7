@@ -32,7 +32,7 @@ module.exports = function (grunt) {
           'dist/pkcs7.js': 'lib/pkcs7.js'
         },
         options: {
-          bundleOptions: {
+          browserifyOptions: {
             standalone: 'pkcs7'
           }
         }
@@ -42,7 +42,7 @@ module.exports = function (grunt) {
           'dist/pkcs7.pad.js': 'lib/pad.js'
         },
         options: {
-          bundleOptions: {
+          browserifyOptions: {
             standalone: 'pkcs7.pad'
           }
         }
@@ -52,7 +52,18 @@ module.exports = function (grunt) {
           'dist/pkcs7.unpad.js': 'lib/unpad.js'
         },
         options: {
-          bundleOptions: {
+          browserifyOptions: {
+            standalone: 'pkcs7.unpad'
+          }
+        }
+      },
+      unpad_global: {
+        files: {
+          'dist/pkcs7.unpad.global.js': 'lib/unpad.js'
+        },
+        options: {
+          plugin: ['deumdify'],
+          browserifyOptions: {
             standalone: 'pkcs7.unpad'
           }
         }
