@@ -49,12 +49,7 @@ module.exports = function (grunt) {
       },
       unpad: {
         files: {
-          'dist/pkcs7.unpad.js': 'lib/unpad.js'
-        },
-        options: {
-          bundleOptions: {
-            standalone: 'pkcs7.unpad'
-          }
+          'dist/pkcs7.unpad.js': 'lib/unpad.export.js'
         }
       }
     },
