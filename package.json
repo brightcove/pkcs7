@@ -1,6 +1,6 @@
 {
   "name": "pkcs7",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "main": "lib/pkcs7.js",
   "description": "Add and remove pkcs7-style padding.",
   "homepage": "https://github.com/brightcove/pkcs7",
