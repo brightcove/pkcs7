@@ -6,4 +6,4 @@
  */
 export default function unpad(padded) {
   return padded.subarray(0, padded.byteLength - padded[padded.byteLength - 1]);
-};
+}
