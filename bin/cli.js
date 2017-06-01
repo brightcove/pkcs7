@@ -2,7 +2,7 @@
 
 'use strict';
 
-var pkcs7 = require('./pkcs7');
+var pkcs7 = require('../src/pkcs7');
 var fs = require('fs');
 var path = require('path');
 
