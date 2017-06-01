@@ -1,6 +1,6 @@
 'use strict';
 
-var pkcs7 = require('../lib/pkcs7.js');
+var pkcs7 = require('../src/pkcs7.js');
 
 /*
   ======== A Handy Little Nodeunit Reference ========

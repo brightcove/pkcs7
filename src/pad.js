@@ -16,7 +16,7 @@ var PADDING;
  * @return {Uint8Array} the padded bytes
  * @see http://tools.ietf.org/html/rfc5652
  */
-module.exports = function pad(plaintext) {
+export default function pad(plaintext) {
   var padding = PADDING[(plaintext.byteLength % 16) || 0],
       result = new Uint8Array(plaintext.byteLength + padding.length);
   result.set(plaintext);
