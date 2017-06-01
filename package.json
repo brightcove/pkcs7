@@ -55,6 +55,13 @@
     "lint": "vjsstandard",
     "pretest": "npm-run-all lint build:test",
     "test": "nodeunit test/dist/pkcs7_test.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:js": "npm-run-all -p watch:js:modules watch:js:umd watch:js:pad watch:js:unpad",
+    "watch:js:modules": "rollup -c scripts/modules.rollup.js -w",
+    "watch:js:umd": "rollup -c scripts/umd.rollup.js -w",
+    "watch:js:pad": "rollup -c scripts/pad.rollup.js -w",
+    "watch:js:unpad": "rollup -c scripts/unpad.rollup.js -w",
+    "watch:test": "rollup -c scripts/test.rollup.js -w",
     "prepublish": "npm run build"
   },
   "bin": {
