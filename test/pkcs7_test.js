@@ -1,6 +1,8 @@
 'use strict';
 
-var pkcs7 = require('../src/pkcs7.js');
+import {pad, unpad} from '../src/pkcs7.js';
+
+const pkcs7 = {pad, unpad};
 
 /*
   ======== A Handy Little Nodeunit Reference ========

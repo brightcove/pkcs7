@@ -36,16 +36,34 @@
     "grunt-contrib-watch": "^0.6.1",
     "jshint-stylish": "^0.2.0",
     "load-grunt-tasks": "^0.4.0",
+    "nodeunit": "^0.11.0",
+    "npm-run-all": "^4.0.2",
     "rollup": "^0.41.6",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-json": "^2.1.1",
     "rollup-watch": "^3.2.2",
-    "time-grunt": "^0.3.1"
+    "time-grunt": "^0.3.1",
+    "videojs-standard": "^5.2.0"
   },
   "scripts": {
-    "test": "grunt"
+    "build": "npm-run-all -p build:*",
+    "build:js:modules": "rollup -c scripts/modules.rollup.js",
+    "build:js:umd": "rollup -c scripts/umd.rollup.js",
+    "build:js:pad": "rollup -c scripts/pad.rollup.js",
+    "build:js:unpad": "rollup -c scripts/unpad.rollup.js",
+    "build:test": "rollup -c scripts/test.rollup.js",
+    "lint": "vjsstandard",
+    "pretest": "npm-run-all build:test",
+    "test": "nodeunit test/dist/pkcs7_test.js"
   },
   "bin": {
     "pkcs7": "bin/cli.js"
+  },
+  "vjsstandard": {
+    "ignore": [
+      "dist",
+      "docs",
+      "test/dist"
+    ]
   }
 }
