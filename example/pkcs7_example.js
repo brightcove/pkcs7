@@ -1,6 +1,6 @@
 'use strict';
 
-var pkcs7 = require('../lib/pkcs7.js');
+const pkcs7 = require('../dist/pkcs7.cjs.js');
 
 pkcs7.awesome();
 // => awesome

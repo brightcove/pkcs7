@@ -6,9 +6,7 @@
  * Licensed under the apache2 license.
  */
 
-'use strict';
-
-var PADDING;
+let PADDING;
 
 /**
  * Returns a new Uint8Array that is padded with PKCS#7 padding.
@@ -16,13 +14,15 @@ var PADDING;
  * @return {Uint8Array} the padded bytes
  * @see http://tools.ietf.org/html/rfc5652
  */
-module.exports = function pad(plaintext) {
-  var padding = PADDING[(plaintext.byteLength % 16) || 0],
-      result = new Uint8Array(plaintext.byteLength + padding.length);
+export default function pad(plaintext) {
+  const padding = PADDING[(plaintext.byteLength % 16) || 0];
+  const result = new Uint8Array(plaintext.byteLength + padding.length);
+
   result.set(plaintext);
   result.set(padding, plaintext.byteLength);
+
   return result;
-};
+}
 
 // pre-define the padding values
 PADDING = [
