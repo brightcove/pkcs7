@@ -6,10 +6,6 @@
   "description": "Add and remove pkcs7-style padding.",
   "homepage": "https://github.com/brightcove/pkcs7",
   "bugs": "https://github.com/brightcove/pkcs7/issues",
-  "engines": {
-    "npm": "^1.4.6",
-    "node": "^0.10"
-  },
   "author": {
     "name": "Brightcove"
   },
