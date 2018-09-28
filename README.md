@@ -1,7 +1,24 @@
-# pkcs7 [![Build Status](https://secure.travis-ci.org/brightcove/pkcs7.png?branch=master)](http://travis-ci.org/brightcove/pkcs7)
+# pkcs7
+
+[![Build Status](https://travis-ci.org/brightcove/pkcs7.svg?branch=master)](https://travis-ci.org/brightcove/pkcs7)
+[![Greenkeeper badge](https://badges.greenkeeper.io/brightcove/pkcs7.svg)](https://greenkeeper.io/)
+[![Slack Status](http://slack.videojs.com/badge.svg)](http://slack.videojs.com)
+
+[![NPM](https://nodei.co/npm/pkcs7.png?downloads=true&downloadRank=true)](https://nodei.co/npm/pkcs7/)
 
 > Add and remove pkcs7-style padding.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Getting Started](#getting-started)
+- [Documentation](#documentation)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Getting Started
 
@@ -54,5 +71,5 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## License
 
-Copyright (c) 2014 Brightcove  
+Copyright (c) 2014 Brightcove
 Licensed under the Apache-2 license.

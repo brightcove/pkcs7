@@ -12,12 +12,14 @@ if (userArgs.indexOf('-h') !== -1 || userArgs.indexOf('--help') !== -1) {
   // eslint-disable-next-line
   console.log('usage: pkcs7');
   // eslint-disable-next-line
-  return console.log('pkcs7 expects input on stdin and outputs to stdout');
+  console.log('pkcs7 expects input on stdin and outputs to stdout');
+  process.exit();
 }
 
 if (userArgs.indexOf('-v') !== -1 || userArgs.indexOf('--version') !== -1) {
   // eslint-disable-next-line
-  return console.log(JSON.parse(fs.readFileSync(path.join(process.cwd(), 'package.json'))).version);
+  console.log(JSON.parse(fs.readFileSync(path.join(process.cwd(), 'package.json'))).version);
+  process.exit();
 }
 
 const data = [];
