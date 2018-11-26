@@ -50,8 +50,8 @@
     "sinon": "^6.1.5",
     "videojs-generate-karma-config": "~3.0.0",
     "videojs-generate-rollup-config": "~2.2.0",
-    "videojs-standard": "~7.1.0",
-    "videojs-generator-verify": "~1.0.4"
+    "videojs-generator-verify": "^1.2.0",
+    "videojs-standard": "~7.1.0"
   },
   "scripts": {
     "prebuild": "npm run clean",
