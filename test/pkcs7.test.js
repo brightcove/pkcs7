@@ -49,9 +49,11 @@ QUnit.test('works on buffers greater than sixteen bytes', function(assert) {
 
   assert.expect(2);
 
-  assert.equal(pkcs7.pad(buffer).length - buffer.length,
+  assert.equal(
+    pkcs7.pad(buffer).length - buffer.length,
     16 - 9,
-    'adds the correct amount of padding');
+    'adds the correct amount of padding'
+  );
   const result = pkcs7.unpad(pkcs7.pad(buffer));
 
   assert.deepEqual(
