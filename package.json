@@ -1,6 +1,6 @@
 {
   "name": "pkcs7",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/pkcs7.cjs.js",
   "module": "dist/pkcs7.es.js",
   "description": "Add and remove pkcs7-style padding.",
