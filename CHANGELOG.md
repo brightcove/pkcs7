@@ -1,3 +1,10 @@
+<a name="1.0.4"></a>
+## [1.0.4](https://github.com/brightcove/pkcs7/compare/v1.0.3...v1.0.4) (2020-09-09)
+
+### Chores
+
+* **package:** remove postcss-cli ([aed7b3a](https://github.com/brightcove/pkcs7/commit/aed7b3a))
+
 <a name="1.0.3"></a>
 ## [1.0.3](https://github.com/brightcove/pkcs7/compare/v1.0.2...v1.0.3) (2019-08-21)
 
