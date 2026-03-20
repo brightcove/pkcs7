@@ -36,12 +36,12 @@
   "devDependencies": {
     "rollup": "^1.19.4",
     "@videojs/generator-helpers": "~1.2.0",
-    "karma": "^4.0.0",
+    "karma": "^6.4.4",
     "sinon": "^7.2.2",
     "videojs-generate-karma-config": "~5.3.1",
     "videojs-generator-verify": "~2.0.0",
     "videojs-generate-rollup-config": "~5.0.0",
-    "videojs-standard": "^8.0.3"
+    "videojs-standard": "^9.1.0"
   },
   "scripts": {
     "build-test": "cross-env-shell TEST_BUNDLE_ONLY=1 'npm run build'",
