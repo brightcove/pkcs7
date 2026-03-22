@@ -30,9 +30,6 @@
     "videojs",
     "videojs-plugin"
   ],
-  "dependencies": {
-    "@babel/runtime": "^7.5.5"
-  },
   "devDependencies": {
     "rollup": "^1.19.4",
     "@videojs/generator-helpers": "~1.2.0",
